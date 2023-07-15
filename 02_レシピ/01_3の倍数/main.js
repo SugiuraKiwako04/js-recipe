@@ -1,10 +1,12 @@
-const number = 100
+const display = document.getElementById("display")
+const plusButton = document.getElementById("plus-button")
 
-// n に入っている値を 1 から、 number まで、 1 ずつ増やしながら、 {} の中身を繰り返す
-for (let n = 1; n <= number; n++) {
-  if (n % 3 === 0) {
-    console.log(n + "!!!!!!!")
-  } else {
-    console.log(n)
-  }
+let count = 0
+
+// ボタン要素のonclickハンドラに関数を代入する
+plusButton.onclick = function() {
+  // count を更新
+  count += 1
+  // count を表示
+  display.textContent = count
 }
